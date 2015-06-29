@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.rameysoft.streamline.main.model.Book;
-import com.rameysoft.streamline.main.repositories.BookRepository;
+import com.rameysoft.streamline.main.model.Supplier;
+import com.rameysoft.streamline.main.repositories.SupplierRepository;
 
 /**
- * Hello world!
+ * Application Configuration!
  *
  */
 @SpringBootApplication
@@ -21,20 +21,17 @@ public class ApplicationConfig {
 	final static Logger LOGGER = LoggerFactory.getLogger(ApplicationConfig.class);
 	private static ApplicationContext context;
 	@Autowired
-    protected BookRepository bookRepository;
+    protected SupplierRepository bookRepository;
 	
 	public ApplicationConfig() {}
 
 	public void BookAdd() {
-		Book book = new Book();
-        book.setAuthor("Mubasher");
-        book.setIsbn("1");
-        book.setDescription("my book");
-        book.setTitle("book");
-		bookRepository.save(book);
-		Book b = bookRepository.findOne(book.getIsbn());
-		System.out.print(b);
-		LOGGER.debug("BookInfo {}", b);
+		Supplier supplier = new Supplier();
+		supplier.setName("Mubasher");
+		supplier = bookRepository.save(supplier);
+		supplier = bookRepository.findOne(supplier.getId());
+		System.out.print(supplier);
+		LOGGER.debug("Supplier Info {}", supplier);
 	}
 	public static void main(String[] args) throws Exception {
 		setContext(SpringApplication.run(ApplicationConfig.class, args));

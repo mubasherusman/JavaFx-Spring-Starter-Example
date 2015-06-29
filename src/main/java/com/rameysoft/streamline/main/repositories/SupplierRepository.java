@@ -4,10 +4,10 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.rameysoft.streamline.main.model.Book;
+import com.rameysoft.streamline.main.model.Supplier;
 
 @Repository
-public interface BookRepository extends CrudRepository<Book, String> {
+public interface SupplierRepository extends CrudRepository<Supplier, Integer> {
 
-    public Iterable<Book> findBooksByAuthor(@Param("author") String author);
+    public Iterable<Supplier> findSuppliersByName(@Param("name") String name);
 }
