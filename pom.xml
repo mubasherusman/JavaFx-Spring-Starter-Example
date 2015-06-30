@@ -73,7 +73,7 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.rameysoft.streamline.main.App</mainClass>
+                    <mainClass>com.rameysoft.streamline.main.ConfigAndBootApplication</mainClass>
                 </configuration>
             </plugin>
 		</plugins>
