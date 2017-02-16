@@ -26,7 +26,7 @@
 			<AppenderRef ref="streamline_app"/>
 		</root>
 		
-		<AsyncLogger name="com.rameysoft.streamline.main" additivity="FALSE" level="DEBUG">
+		<AsyncLogger name="com.rameysoft.main" additivity="FALSE" level="DEBUG">
 			<AppenderRef ref="console"/>
             <AppenderRef ref="streamline_app"/>
         </AsyncLogger>

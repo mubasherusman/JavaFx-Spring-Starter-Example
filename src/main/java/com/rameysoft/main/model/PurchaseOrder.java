@@ -1,4 +1,4 @@
-package com.rameysoft.streamline.main.model;
+package com.rameysoft.main.model;
 
 // Generated Jun 28, 2015 9:47:25 PM by Hibernate Tools 4.0.0
 
